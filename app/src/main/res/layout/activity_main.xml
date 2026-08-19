@@ -10,10 +10,39 @@
     android:background="#FFFFFF"
     tools:context=".MainActivity">
 
+
+    <!-- ========================= -->
+    <!-- APP TITLE -->
+    <!-- ========================= -->
+
+    <TextView
+        android:id="@+id/appTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:text="MAD_Alarm_Practical"
+        android:textColor="#333333"
+        android:textSize="23sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!-- ========================= -->
+    <!-- MAIN SCROLL AREA -->
+    <!-- ========================= -->
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fillViewport="true">
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/appTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -35,13 +64,14 @@
                 app:cardElevation="4dp"
                 app:strokeWidth="0dp">
 
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
 
-                    <!-- ALARM IMAGE -->
+                    <!-- FIRST ALARM IMAGE -->
 
                     <ImageView
                         android:id="@+id/imageView3"
@@ -61,6 +91,7 @@
                         android:background="#E8F5E9"
                         android:padding="12dp">
 
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -68,6 +99,7 @@
                             android:textColor="#333333"
                             android:textSize="16sp"
                             android:textStyle="bold" />
+
 
                         <TextView
                             android:layout_width="match_parent"
@@ -77,6 +109,7 @@
                             android:textColor="#555555"
                             android:textSize="14sp" />
 
+
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -84,6 +117,7 @@
                             android:text="Check Current time by looking below real digital clock."
                             android:textColor="#555555"
                             android:textSize="14sp" />
+
 
                         <TextView
                             android:id="@+id/realTimeClock"
@@ -95,6 +129,7 @@
                             android:textColor="#333333"
                             android:textSize="16sp"
                             android:textStyle="bold" />
+
 
                         <Button
                             android:id="@+id/button"
@@ -116,7 +151,7 @@
             </com.google.android.material.card.MaterialCardView>
 
 
-            <!-- SPACE BETWEEN CARDS -->
+            <!-- GAP BETWEEN CARDS -->
 
             <Space
                 android:layout_width="match_parent"
@@ -137,6 +172,7 @@
                 app:cardElevation="4dp"
                 app:strokeWidth="0dp"
                 tools:visibility="visible">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -164,6 +200,7 @@
                         android:background="#E8F5E9"
                         android:padding="12dp">
 
+
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -171,6 +208,7 @@
                             android:textColor="#333333"
                             android:textSize="16sp"
                             android:textStyle="bold" />
+
 
                         <TextView
                             android:id="@+id/alarmTimeDisplay"
@@ -181,6 +219,7 @@
                             android:textColor="#333333"
                             android:textSize="16sp"
                             android:textStyle="bold" />
+
 
                         <Button
                             android:id="@+id/cancelAlarmButton"
